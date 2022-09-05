@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Aberto</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+    <a-scene>
+
+        <a-assets id= "Som">
+            <audio id="musicaTown" src="TownTheme.mp3" preload="auto"></audio>
+        </a-assets>
+
+        <!--ceu-FEITO-->
+        <a-sky color="#87CEFA" ></a-sky>
+        <a-entity light="type: ambient; color: #FFDAB9"></a-entity>
+      
+
+        <!--chão/passeio-FEITO-#F0FFF0-->
+        <a-plane id="chaoPrincipal"
+            color="#F0FFF0"
+            rotation="-90 0 0" 
+            scale="300 300 300"
+            position='0 -2 -5'
+            sound="src:#musicaTown;  autoplay:  true;  distanceModel:  exponential;  loop:  true;  refDistance:  40; volume:0.1" 
+            roughness: 1>
+        </a-plane>
+
+        <!--Playground-->
+        <a-assets>
+            <a-asset-item id="playground" src="playground.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="playground"
+            gltf-model='#playground'
+            position='102 0 7'
+            rotation='0 90 0' 
+            scale = '20 20 20'
+            >
+        </a-entity>
+        
+
+        <!--Pinguins discoteca-->
+        <a-assets>
+            <a-asset-item id="penguindancar" src="penguindancar/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-gltf-model id="dancarino1"
+            position = "-5 -1.5 -35"
+            rotation = '0 90 0'
+            scale="0.005 0.005 0.005"
+            src="#penguindancar"
+            animation-mixer="clip: Scene;"> 
+        </a-gltf-model>
+
+        <a-gltf-model id="dancarino2"
+            position = "-1 -1.5 -35"
+            rotation = '0 37 0'
+            scale="0.005 0.005 0.005"
+            src="#penguindancar"
+            animation-mixer="clip: Scene;"> 
+        </a-gltf-model>
+
+        <a-gltf-model id="dancarino3"
+            position = "3.2 -1.5 -35"
+            rotation = '0 90 0'
+            scale="0.005 0.005 0.005"
+            src="#penguindancar"
+            animation-mixer="clip: Scene;"> 
+        </a-gltf-model>
+
+        <a-gltf-model id="dancarino4"
+            position = "-5 -1.5 -40"
+            rotation = '0 270 0'
+            scale="0.005 0.005 0.005"
+            src="#penguindancar"
+            animation-mixer="clip: Scene;"> 
+        </a-gltf-model>
+
+        <a-gltf-model id="dancarino5"
+            position = "-1 -1.5 -40"
+            rotation = '0 37 0'
+            scale="0.005 0.005 0.005"
+            src="#penguindancar"
+            animation-mixer="clip: Scene;"> 
+        </a-gltf-model>
+
+        <a-gltf-model id="dancarino6"
+            position = "3.2 -1.5 -40"
+            rotation = '0 270 0'
+            scale="0.005 0.005 0.005"
+            src="#penguindancar"
+            animation-mixer="clip: Scene;"> 
+        </a-gltf-model>
+
+        <a-gltf-model id="dancarino7"
+            position = "-5 -1.5 -45"
+            rotation = '0 56 0'
+            scale="0.005 0.005 0.005"
+            src="#penguindancar"
+            animation-mixer="clip: Scene;"> 
+        </a-gltf-model>
+
+        <a-gltf-model id="dancarino8"
+            position = "-1 -1.5 -45"
+            rotation = '0 37 0'
+            scale="0.005 0.005 0.005"
+            src="#penguindancar"
+            animation-mixer="clip: Scene;"> 
+        </a-gltf-model>
+
+        <a-gltf-model id="dancarino9"
+            position = "3.2 -1.5 -45"
+            rotation = '0 90 0'
+            scale="0.005 0.005 0.005"
+            src="#penguindancar"
+            animation-mixer="clip: Scene;"> 
+        </a-gltf-model>
+
+        <!--Pinguins para trazer alguma vida ao mundo/retirado de: https://sketchfab.com/3d-models/penguin-club-penguin-646e334dea5249708138b0ea2d6a6fdb-->
+        <a-assets>
+            <a-asset-item id="penguin" src="penguin/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="penguin"
+            gltf-model='#penguin'
+            position='-5.935 -0.684 -24.356'
+            rotation = '0 -15 0'
+            scale = '0.3 0.3 0.3'
+            >
+        </a-entity>
+
+        <a-entity id="penguin"
+            gltf-model='#penguin'
+            position='62.463 -0.684 -38.555'
+            rotation = '0 -15 0'
+            scale = '0.3 0.3 0.3'
+            >
+        </a-entity>
+
+        <a-entity id="penguin"
+            gltf-model='#penguin'
+            position='62.463 -0.684 -34.555'
+            rotation = '0 -105 0'
+            scale = '0.3 0.3 0.3'
+            >
+        </a-entity>
+
+        <a-entity id="penguin"
+            gltf-model='#penguin'
+            position='-3.5 -0.684 -24'
+            rotation = '0 -115 0'
+            scale = '0.3 0.3 0.3'
+            >
+        </a-entity>
+
+        <a-entity id="penguin"
+            gltf-model='#penguin'
+            position='-17.076 -0.684 1.386'
+            rotation = '0 90 0'
+            scale = '0.3 0.3 0.3'
+            >
+        </a-entity>
+        
+        <a-entity id="penguin"
+        gltf-model='#penguin'
+        position='-47.555 -0.684 -12.198'
+        rotation = '0 0 0'
+        scale = '0.3 0.3 0.3'
+        >
+        </a-entity>
+    
+        <a-entity id="penguin"
+        gltf-model='#penguin'
+        position='-54.866 -0.684 0.000'
+        rotation = '0 -105 0'
+        scale = '0.3 0.3 0.3'
+        >
+        </a-entity>
+
+        <a-entity id="penguin"
+        gltf-model='#penguin'
+        position='102 -1.75 7.5'
+        rotation = '0 -105 0'
+        scale = '0.1 0.1 0.1'
+        >
+        </a-entity>
+
+        <a-entity id="penguin"
+        gltf-model='#penguin'
+        position='102 -0.684 4'
+        rotation = '0 -110 0'
+        scale = '0.3 0.3 0.3'
+        >
+        </a-entity>
+
+        <a-entity id="penguin"
+        gltf-model='#penguin'
+        position='105 -0.684 5'
+        rotation = '0 -180 0'
+        scale = '0.3 0.3 0.3'
+        >
+        </a-entity>
+
+        <!--Neve-FEITO-->
+        <a-sphere position="14 -2 -21.047" radius="0.25" color="#FFFAFA" roughness: 1></a-sphere>
+        <a-sphere position="13.346 -2 -21.327" radius="0.5" color="#FFFAFA" roughness: 1></a-sphere>
+        <a-sphere position="14.338 -2 -22.108" radius="0.65" color="#FFFAFA" roughness: 1></a-sphere>
+
+        <a-sphere position="-30.462 -2 -20.977" radius="0.25" color="#FFFAFA" roughness: 1></a-sphere>
+        <a-sphere position="-30.618 -2 -21.958" radius="0.5" color="#FFFAFA" roughness: 1></a-sphere>
+        <a-sphere position="-31.788 -2 -21.550" radius="0.65" color="#FFFAFA" roughness: 1></a-sphere>
+
+        <a-sphere position="15.210 -2 -18.965" radius="0.25" color="#FFFAFA" roughness: 1></a-sphere>
+        <a-sphere position="14.430 -2 -18.360" radius="0.1" color="#FFFAFA" roughness: 1></a-sphere>
+        <a-sphere position="14.472 -2 -17.962" radius="0.15" color="#FFFAFA" roughness: 1></a-sphere>
+
+        <a-sphere position="-30.675 -2 -18.663" radius="0.25" color="#FFFAFA" roughness: 1></a-sphere>
+        <a-sphere position="-28.749 -2 -17.890" radius="0.1" color="#FFFAFA" roughness: 1></a-sphere>
+        <a-sphere position="-29.625 -2 -18.508" radius="0.15" color="#FFFAFA" roughness: 1></a-sphere>
+
+        <!--candeeiros para detalhes/Feito no Paint3D/ FEITO-->
+        <!--candeeiro lado direito-->
+        <a-assets>
+            <a-asset-item id="candeeiro" src="candeeiroEstrutura.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="candeeiroDireito"
+            gltf-model='#candeeiro'
+            position='14.985 2.578 -24.349'
+            scale = '15 15 15'
+            rotation = '0 -15 0'
+            >
+        </a-entity>
+
+        <a-box id="luzDireita" position='14 4.070 -21.5' rotation='0 -10 0'  color="#FFFACD" transparent:true></a-box>
+
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2" position="14 4.070 -21.5"></a-entity>
+
+        <!--candeeiro parte tras do utilizador-->
+        <a-assets>
+            <a-asset-item id="candeeiro" src="candeeiroEstrutura.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="candeeiroT2"
+            gltf-model='#candeeiro'
+            position='17.547 1.331 6.493'
+            scale = '15 15 15'
+            rotation = '0 -15 0'
+            >
+        </a-entity>
+
+        <a-box id="luzT1" position='16.651 2.676 9.4' rotation='0 -10 0'  color="#FFFACD" transparent:true></a-box>
+
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2" position="16.651 2.676 9.4"></a-entity>
+
+        <a-assets>
+            <a-asset-item id="candeeiro" src="candeeiroEstrutura.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="candeeiroT1"
+            gltf-model='#candeeiro'
+            position='28.547 1.331 6.493'
+            scale = '15 15 15'
+            rotation = '0 -15 0'
+            >
+        </a-entity>
+
+        <a-box id="luzT2" position='27.651 2.676 9.4' rotation='0 -10 0'  color="#FFFACD" transparent:true></a-box>
+
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2" position="27.651 2.676 9.4"></a-entity>
+
+
+
+        <!--candeeiro lado esquerdo-->
+        <a-assets>
+            <a-asset-item id="candeeiro" src="candeeiroEstrutura.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="candeeiroEsquerdo"
+            gltf-model='#candeeiro'
+            position='-30.366 2.578 -24.349'
+            scale = '15 15 15'
+            rotation = '0 -5 0'
+            >
+        </a-entity>
+
+        <a-box position='-30.845 4.070 -21.377' rotation='0 -6 0'  color="#FFFACD"></a-box>
+
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2" position="-30.845 4.070 -21.377"></a-entity>
+        
+
+        <!--placas que existiam quando visitavamos os lugares e que nos "levavam" para outro lugar do mundo/Feito no Paint3D/FEITO-->
+        <!--placa seta direita-->
+        <a-assets>
+            <a-asset-item id="placaDireita" src="placa.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="placaDireita"
+            gltf-model='#placaDireita'
+            position='14.985 -0.916 -19.349'
+            scale = '5 5 5'
+            rotation = '0 -15 0'
+            >
+        </a-entity>
+
+        <!--placa seta esquerda-->
+        <a-assets>
+            <a-asset-item id="placaEsquerda" src="placa2.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="placaEsquerda"
+            gltf-model='#placaEsquerda'
+            position='-30 -0.916 -19.349'
+            scale = '5 5 5'
+            rotation = '0 15 0'
+            >
+        </a-entity>
+        
+        <!--arvores/ preencher espaço e trazer alguns detalhes necessários/Feito no Paint3D-->
+        <a-assets>
+            <a-asset-item id='arvore2' src="arvore2.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="arvore1"
+            gltf-model='#arvore2'
+            position='-1.459 5 15.029'
+            scale='25 25 25'
+            rotation = "0 90 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore2"
+            gltf-model='#arvore2'
+            position='-7.756 5 19.840'
+            scale='25 25 25'
+            rotation = "0 90 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore3"
+            gltf-model='#arvore2'
+            position='-1.825 3 13.362'
+            scale='20 22 20'
+            rotation = "0 90 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore4"
+            gltf-model='#arvore2'
+            position='5.459 5 15.029'
+            scale='25 25 25'
+            rotation = "0 90 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore5"
+            gltf-model='#arvore2'
+            position='-10 5 15.029'
+            scale='25 25 25'
+            rotation = "0 90 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore6"
+            gltf-model='#arvore2'
+            position='-5.825 3 13.362'
+            scale='20 22 20'
+            rotation = "0 90 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore7"
+            gltf-model='#arvore2'
+            position='50 4 -50'
+            scale='25 25 25'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore8"
+            gltf-model='#arvore2'
+            position='60 3 -45'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore9"
+            gltf-model='#arvore2'
+            position='56.105 3 -49'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore10"
+            gltf-model='#arvore2'
+            position='60.105 3 5'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore11"
+            gltf-model='#arvore2'
+            position='56.105 3 5'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore12"
+            gltf-model='#arvore2'
+            position='64.105 3 3'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore13"
+            gltf-model='#arvore2'
+            position='68.105 3 3'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore14"
+            gltf-model='#arvore2'
+            position='72.105 3 1'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore15"
+            gltf-model='#arvore2'
+            position='76.105 3 1'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore16"
+            gltf-model='#arvore2'
+            position='80.105 3 -1'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore17"
+            gltf-model='#arvore2'
+            position='84.105 3 -3'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore18"
+            gltf-model='#arvore2'
+            position='88.105 3 -5'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore19"
+            gltf-model='#arvore2'
+            position='88.105 3 -8'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore20"
+            gltf-model='#arvore2'
+            position='88.105 3 -12'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore21"
+            gltf-model='#arvore2'
+            position='88.105 3 -15'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore22"
+        gltf-model='#arvore2'
+        position='88.105 3 -18'
+        scale='20 20 20'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore23"
+        gltf-model='#arvore2'
+        position='80.105 4 -11.308'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity> 
+        
+        <a-entity id="arvore24"
+        gltf-model='#arvore2'
+        position='87.066 4 -6.765'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+        
+        <a-entity id="arvore25"
+        gltf-model='#arvore2'
+        position='74.105 4 -7.607'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore26"
+        gltf-model='#arvore2'
+        position='70.105 4 -1.388'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore27"
+        gltf-model='#arvore2'
+        position='68.429 4 -4.143'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore28"
+        gltf-model='#arvore2'
+        position='55.311 4 0.422'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore29"
+        gltf-model='#arvore2'
+        position='15.311 3 5.422'
+        scale='20 20 20'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore30"
+        gltf-model='#arvore2'
+        position='45.311 3 5.422'
+        scale='20 20 20'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore31"
+        gltf-model='#arvore2'
+        position='35.311 3 5.422'
+        scale='20 20 20'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore32"
+            gltf-model='#arvore2'
+            position='72.105 3 -9'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore33"
+            gltf-model='#arvore2'
+            position='76.105 3 -9'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore34"
+            gltf-model='#arvore2'
+            position='80.105 3 -11'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore35"
+            gltf-model='#arvore2'
+            position='84.105 3 -13'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore36"
+            gltf-model='#arvore2'
+            position='88.105 3 -15'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore37"
+            gltf-model='#arvore2'
+            position='88.105 3 -18'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore38"
+            gltf-model='#arvore2'
+            position='88.105 3 -22'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore39"
+            gltf-model='#arvore2'
+            position='88.105 3 -15'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore40"
+        gltf-model='#arvore2'
+        position='8.812 3 13.167'
+        scale='20 20 20'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore41"
+        gltf-model='#arvore2'
+        position='80.105 4 -21.308'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity> 
+        
+        <a-entity id="arvore42"
+        gltf-model='#arvore2'
+        position='87.066 4 -16.765'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+        
+        <a-entity id="arvore43"
+        gltf-model='#arvore2'
+        position='74.105 4 -17.607'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore44"
+        gltf-model='#arvore2'
+        position='70.105 4 -11.388'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore45"
+            gltf-model='#arvore2'
+            position='80.105 3 11'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore46"
+            gltf-model='#arvore2'
+            position='84.105 3 13'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore47"
+            gltf-model='#arvore2'
+            position='88.105 3 15'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore48"
+            gltf-model='#arvore2'
+            position='88.105 3 18'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore49"
+            gltf-model='#arvore2'
+            position='88.105 3 22'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore50"
+            gltf-model='#arvore2'
+            position='88.105 3 15'
+            scale='20 20 20'
+            rotation = "0 -10 0"
+            >
+        </a-entity>
+
+        <a-entity id="arvore51"
+        gltf-model='#arvore2'
+        position='88.105 3 18'
+        scale='20 20 20'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore52"
+        gltf-model='#arvore2'
+        position='80.105 4 21.308'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity> 
+        
+        <a-entity id="arvore53"
+        gltf-model='#arvore2'
+        position='87.066 4 16.765'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+        
+        <a-entity id="arvore54"
+        gltf-model='#arvore2'
+        position='74.105 4 17.607'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore55"
+        gltf-model='#arvore2'
+        position='70.105 4 11.388'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore56"
+        gltf-model='#arvore2'
+        position='3 4 11'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+        <a-entity id="arvore57"
+        gltf-model='#arvore2'
+        position='5 4 11'
+        scale='25 25 25'
+        rotation = "0 -10 0"
+        >
+        </a-entity>
+
+
+        <!---------------------------discoteca/ retirado de: https://poly.google.com/view/bO4LfG-1qVh/ FALTA MUSICA ------------------------------>
+        <a-assets>
+            <a-asset-item id="nigthclub" src="nigthclub/club penguin night club populated v3 (fixd).gltf"></a-asset-item>
+        </a-assets>
+
+        <a-assets id= "Som">
+            <audio id="musicaNC" src="NightClub.mp3" preload="auto"></audio>
+        </a-assets>
+
+        <a-entity id="nigthclub"
+            gltf-model='#nigthclub'
+            position='-5 -2 -30'
+            scale='0.3 0.3 0.3'
+            rotation = "0 270 0"
+            sound="src:#musicaNC;  autoplay:  true;  distanceModel:  exponential;  loop:  true;  refDistance:  0.6; volume:5"
+            >
+        </a-entity>
+
+        <a-entity light="type: point; intensity: 1.5; distance: 50; decay: 2; color:#7CFC00" position="0 10 -49" ></a-entity>
+
+        <a-entity rotation="3 -4 2" animation="property: rotation; to: 0 150 0; loop: true; dur: 3000">
+            <a-entity light="type: point; intensity: 10; distance: 15; decay: 2; color:blue" position="0 9 -49" ></a-entity>
+        </a-entity>
+
+        <a-entity rotation="-3 -4 2" animation="property: rotation; to: 0 130 0; loop: true; dur: 5000">
+            <a-entity light="type: point; intensity: 10; distance: 15; decay: 2; color:blue" position="0 9 -49" ></a-entity>
+        </a-entity>
+
+        <a-entity rotation="3 -4 4" animation="property: rotation; to: 0 150 0; loop: true; dur: 8000">
+            <a-entity light="type: point; intensity: 10; distance: 15; decay: 2; color:red" position="0 9 -49"></a-entity>
+        </a-entity>
+
+        <a-entity rotation="-3 -4 1" animation="property: rotation; to: 0 90 0; loop: true; dur: 11000">
+            <a-entity light="type: point; intensity: 10; distance: 15; decay: 2; color:#FF1493" position="0 9 -49"></a-entity>
+        </a-entity>
+        
+
+        <!--------------------Montes/delimitar a area do trabalho e dar algum relevo como havia no cp/Feito no Paint3D---------------------------->
+        <a-assets>
+            <a-asset-item id="montes" src="montesFundo.glb"></a-asset-item>
+        </a-assets>
+
+        <!--Montes atras do nigthclub-->
+        <a-entity id="montes1"
+            gltf-model='#montes'
+            position='0 -2 -150'
+            scale='150 150 150'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <a-entity id="montes2"
+            gltf-model='#montes'
+            position='40 -2 -150'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <a-entity id="montes3"
+            gltf-model='#montes'
+            position='-40 -2 -150'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <!--Montes atras do user-->
+        <a-entity id="montes4"
+            gltf-model='#montes'
+            position='40 -2 50'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <a-entity id="montes5"
+            gltf-model='#montes'
+            position='-47.238 -20.096 40.923'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <a-entity id="montes6"
+            gltf-model='#montes'
+            position='0 -2 50'
+            scale='150 150 150'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <!--Montes à direita do user-->
+        <a-entity id="montes7"
+            gltf-model='#montes'
+            position='180 -2 -40'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <a-entity id="montes8"
+            gltf-model='#montes'
+            position='180 -2 40'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <a-entity id="montes9"
+            gltf-model='#montes'
+            position='180 -2 0'
+            scale='150 150 150'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <!--Montes canto superior direito-->
+        <a-entity id="montes10"
+            gltf-model='#montes'
+            position='140 8.126 -90.394'
+            scale='125 150 125'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <a-entity id="montes11"
+            gltf-model='#montes'
+            position='100 -2 -140'
+            scale='150 150 150'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <a-entity id="montes12"
+            gltf-model='#montes'
+            position='115 -2 -125'
+            scale='100 100 100'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <!--Monte canto inferior direito-->
+        <a-entity id="montes13"
+            gltf-model='#montes'
+            position='165.140 -8.054 26.662'
+            scale='125 150 125'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <a-entity id="montes14"
+            gltf-model='#montes'
+            position='100 -2 40'
+            scale='150 150 150'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <a-entity id="montes15"
+            gltf-model='#montes'
+            position='115 -2 25'
+            scale='100 100 100'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <!--Monte canto inferior esquerdo-->
+        <a-entity id="montes16"
+            gltf-model='#montes'
+            position='-100 -2 40'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <a-entity id="montes17"
+            gltf-model='#montes'
+            position='-180 -2 25'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <a-entity id="montes18"
+            gltf-model='#montes'
+            position='-147.371 -5.851 59.186'
+            scale='100 100 100'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <!--Lado esquerdo do user-->
+        <a-entity id="montes19"
+            gltf-model='#montes'
+            position='-108.943 -2 -129.795'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <a-entity id="montes20"
+            gltf-model='#montes'
+            position='-180 -2 40'
+            scale='125 125 125'
+            rotation = "0 0 0"
+            
+            >
+        </a-entity>
+
+        <a-entity id="montes21"
+            gltf-model='#montes'
+            position='-180 -2 0'
+            scale='150 150 150'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <a-entity id="montes22"
+            gltf-model='#montes'
+            position='-140 -2 -86.156'
+            scale='150 150 150'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <!-------------igloo-4 igloos a imitar uma povoação à distancia/retirado: biblioteca Paint3D (pesquisa:"igloo")/FEITO-------------------->
+
+        <a-assets>
+            <a-asset-item id="igloo" src="igloo.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="igloo1"
+            gltf-model='#igloo'
+            position='75 6.5 -60'
+            scale='30 30 30'
+            rotation = "0 0 0"
+            >
+        </a-entity>
+
+        <a-entity id="igloo2"
+            gltf-model='#igloo'
+            position='95 6.5 -54'
+            scale='30 30 30'
+            rotation = "0 -45 0"
+            >
+        </a-entity>
+
+        <a-entity id="igloo3"
+            gltf-model='#igloo'
+            position='102 6.5 -35'
+            scale='30 30 30'
+            rotation = "0 -90 0"
+            >
+        </a-entity>
+
+        <a-entity id="igloo4"
+            gltf-model='#igloo'
+            position='83.5 6.5 -15.553'
+            scale='30 30 30'
+            rotation = "0 -175 0"
+            >
+        </a-entity>
+
+      </a-scene>
+</body>
+</html>
